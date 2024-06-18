@@ -40,7 +40,7 @@
                     <img src="images/FataiImage1.jpg" alt="Description of image 1">
                 div -->
                 <div class="carousel-slide">
-                    <video autoplay loop muted >
+                    <video autoplay loop muted playsinline>
                         <source src="images/Colorful Blue and Purple Animated YouTube Outro.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="carousel-slide">
-                    <video autoplay loop muted >
+                    <video autoplay loop muted playsinline>
                         <source src="images/latestvid.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -57,7 +57,7 @@
 
                 </div>
                 <div class="carousel-slide">
-                    <video autoplay loop muted >
+                    <video autoplay loop muted playsinline>
                         <source src="images/8figure MErch (2).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -65,7 +65,7 @@
 
                 </div>
                 <div class="carousel-slide">
-                    <video autoplay loop muted >
+                    <video autoplay loop muted playsinline>
                         <source src="images/Untitled video - Made with Clipchamp (2).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -75,7 +75,7 @@
                 </div>
                 
                 <div class="carousel-slide">
-                    <video autoplay loop muted >
+                    <video autoplay loop muted playsinline>
                         <source src="images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -179,3 +179,58 @@
 
 
 
+BEGIN
+
+  // Include necessary headers
+  INCLUDE <iostream>
+  INCLUDE <thread>
+  INCLUDE <mutex>
+
+  // Define a mutex for synchronizing access to shared resources
+  DECLARE mtx AS std::mutex
+
+  // Define the function for thread 1 to count up to 20
+  FUNCTION countUp()
+    FOR i FROM 0 TO 20 DO
+      LOCK mtx USING std::lock_guard<std::mutex>
+      PRINT "Count Up: " + i
+    END FOR
+  END FUNCTION
+
+  // Define the function for thread 2 to count down to 0
+  FUNCTION countDown()
+    FOR i FROM 20 TO 0 STEP -1 DO
+      LOCK mtx USING std::lock_guard<std::mutex>
+      PRINT "Count Down: " + i
+    END FOR
+  END FUNCTION
+
+  // Main function
+  FUNCTION main()
+    TRY
+      // Create and start the first thread to run countUp function
+      DECLARE t1 AS std::thread(countUp)
+      
+      // Wait for the first thread to finish
+      CALL t1.join()
+      
+      // Create and start the second thread to run countDown function
+      DECLARE t2 AS std::thread(countDown)
+      
+      // Wait for the second thread to finish
+      CALL t2.join()
+    CATCH SYSTEM_ERROR e
+      PRINT "System error: " + e.what()
+      RETURN 1
+    CATCH EXCEPTION e
+      PRINT "Exception: " + e.what()
+      RETURN 1
+    CATCH ANY
+      PRINT "Unknown error occurred."
+      RETURN 1
+    END TRY
+
+    RETURN 0
+  END FUNCTION
+
+END
