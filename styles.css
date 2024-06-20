@@ -138,6 +138,30 @@ nav .logo {
     text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+    .mainMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on your header's height */
+        left: 0;
+        background-color: #333;
+        padding-bottom: 10px;
+    }
+
+    .openMenu, .closeMenu {
+        display: block;
+    }
+
+    .closeMenu {
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+}
+
+
 #carousel {
     height: 100%;
     background-color: rgba(0, 0, 0, 10);
@@ -419,7 +443,7 @@ footer {
     color: var(--quinary-green);
 }
 
-/* About Page */
+/*
 #about-body {
     background-image: url(images/aboutbackground.jpg);
     position: right center;
@@ -440,7 +464,7 @@ footer {
     align-items: center;
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.4); /* Enhances text readability */
-}
+
 
 .content-box {
     background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
@@ -451,6 +475,10 @@ footer {
     text-align: center;
 }
 
+.about-page {
+    background-image: none;
+    background-color: #000;
+}
 .about-container img {
     width:90%;
     height: auto;
@@ -485,6 +513,234 @@ footer {
     color: #ffffff;
 }
 
+#career-highlights {
+    color: #000;
+    background: #000;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.timeline-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    height: 40px;
+    background-color: #014034;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    margin-left: 20px;
+    position: relative;
+}
+
+.timeline-content:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.date {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-style: italic;
+}
+
+.gallery-section {
+    padding: 2rem;
+    background-color: #f8f8f8; /* Light grey background */
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to the images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Optional: adds zoom effect on hover */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Zooms in the image slightly on hover */
+}
+
+.discovery-section {
+    padding: 2rem;
+    background-color: #fff; /* White background for a clean look */
+    color: #333; /* Dark text for readability */
+    text-align: left;
+    font-family: 'Futura', sans-serif;
+}
+
+.discovery-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.discovery-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stacks images on very small screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-icon {
+        font-size: 30px;
+        margin-bottom: 20px;
+        flex: 0 0 30px; /* Adjusted to smaller size for better fit */
+        height: 30px; /* Keep it proportional */
+        padding: 10px
+    }
+    
+    .timeline-content {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .timeline-content:before {
+        content: none;
+    }
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no spillover */
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the div without being stretched */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10; /* Keeps the text above the image */
+    width: 100%; /* Ensures text is centered */
+}
+
+header .tagline {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.biography, .timeline, .media-gallery, .discography, .press, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 100vh;
+        object-fit: cover;
+    }
+    .biography p, .timeline h2, .media-gallery h2, .discography h2, .press p {
+        padding: 10px;
+    }
+}
+
+
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 2rem;
+}
+
+/* Responsive adjustments for better viewing on smaller devices */
 
 
 img {
@@ -726,5 +982,15 @@ img {
     .footer-content {
         flex-direction: column;
         align-items:stretch;
+    }
+    h2 {
+        font-size: 2em; /* Slightly smaller font size for the heading */
+    }
+
+    .timeline-icon {
+        font-size: 16px; /* Smaller icon size */
+    }
+    #about-body h1 {
+        font-size: 1rem;
     }
 }

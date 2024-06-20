@@ -25,3 +25,25 @@ document.querySelectorAll('.action-btn').forEach(button => {
         // Add your action here, e.g., open a modal, change the view, etc.
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+        navLinks.style.display = 'none';
+    });
+});
+
+document.querySelector('.logo img').addEventListener('click', function() {
+    this.classList.toggle('rotated');
+    setTimeout(function() {
+        const logo = document.querySelector('.logo img');
+        logo.style.transform = 'rotate(360deg)';
+    }, 3000); // Delays the animation by 3 seconds
+});
