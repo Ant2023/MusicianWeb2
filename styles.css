@@ -188,7 +188,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 #carousel {
     height: 100%;
-    background-color: rgba(0, 0, 0, 10);
+    background-color: rgba(0, 0, 0, 0.6);
     font-family: 'Futura';
 }
 .carousel {
@@ -827,7 +827,7 @@ img {
         align-items: stretch;
     }
     .action-btn {
-        top: 65%;
+        top: 63%;
     }
     .carousel-container video {
         height: auto;
@@ -998,6 +998,15 @@ img {
 
 
 @media (max-width: 480px) {
+    .action-btn {
+        top: 56%;
+    }
+    .carousel-container video {
+        height: auto;
+    }
+    .carousel-container {
+        height: 600px;
+    }
    
     .logo {
         max-width: 120px; /* Even smaller logo for mobile screens */
