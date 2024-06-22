@@ -26,8 +26,9 @@ body {
     font-family: 'Futura', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-primary);
+    background-color: var(--color-tertiary);
     color: white;
+    mix-blend-mode: multiply;
     
 }
 
@@ -147,7 +148,9 @@ nav .social-icons a:hover, nav .social-icons a:focus {
         left: 0;
         background: rgba(0, 0, 0, 0.9);
     }
-
+    nav .logo img {
+        width: 65px;
+    }
     nav .closeMenu {
         display: block;
         position: absolute;
@@ -828,8 +831,10 @@ img {
         top: 65%;
     }
     .carousel-container video {
-        height: 420px;
-        margin: 20px;
+        height: auto;
+    }
+    .carousel-container {
+        height: 600px;
     }
 
     .merch, .music {
@@ -994,10 +999,7 @@ img {
 
 
 @media (max-width: 480px) {
-    nav .mainMenu {
-        margin-top: 0;
-    }
-
+   
     .logo {
         max-width: 120px; /* Even smaller logo for mobile screens */
     }
