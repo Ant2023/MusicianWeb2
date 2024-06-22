@@ -68,11 +68,17 @@ nav .openMenu, nav .closeMenu {
 }
 
 nav .social-icons a {
-    margin: 0 5px;
+    
+    margin: 0 20px;
     color: white;
+    font-size: 1.2rem;
 }
 
+
 nav .mainMenu li a {
+    font-family: 'Futura';
+    font-weight: 500;
+    font-size: 1.2rem;
     padding: 10px 15px;
     color: white;
     text-decoration: none;
@@ -197,7 +203,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     max-width: 100%;
     position: relative; /* Needed for positioning the buttons */
     display: flex;
-    height: 500px;
+    height: auto;
     flex-direction: column;
     align-items: center; /* Center the content horizontally */
     justify-content: center; /* Center the content vertically */
@@ -287,12 +293,12 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 }
 #welcome h2 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size:2.5rem;
 }
 .music {
     text-align: center;
     font-size: 1.8rem;
-    margin: 80px;
+    margin: 20px 40px;
 }
 .music h2 {
     margin-bottom: 10px;
@@ -307,7 +313,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 .merch {
     font-family: 'Futura';
 
-    margin: 80px;
+    margin: 20px 40px;
 }
 /* Sections: Music, Events, Merch */
 #events, #merch {
