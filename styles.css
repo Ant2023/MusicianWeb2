@@ -911,6 +911,7 @@ img {
     }
     .carousel-container {
         height: 600px;
+        margin-bottom: 20px;
     }
 
     .merch, .music {
@@ -1110,3 +1111,4 @@ img {
         font-size: 1rem;
     }
 }
+
