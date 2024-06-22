@@ -12,7 +12,9 @@
 </head>
 <body>
     <nav>
-        <div class="logo"><img src="images/8 Figure_2nd Alternative Logo Vertical (Full).png" alt=""></div>
+        <div class="logo">
+            <img src="images/8 Figure_2nd Alternative Logo Vertical (Full).png" alt="8 Figure Logo">
+        </div>
         <div class="openMenu" id="hamburger"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu" id="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -20,15 +22,14 @@
             <li><a href="music.html">Music</a></li>
             <li><a href="#contact">Contact</a></li>
             <div class="closeMenu"><i class="fa fa-times"></i></div>
-            <span class="icons">
-                <a href="https://www.instagram.com/fataiwilliam/"><i class="fab fa-instagram"></i></a>
-                <a href="https://open.spotify.com/artist/3qEkIPqShQZl3onm6eQwQH?si=Y4eeMEcQRDyzdEx_ZM0leg" target="_blank" title="Spotify">
-                  <i class="fab fa-spotify"></i>
-                </a>
-                <a href="http://www.youtube.com/@fataiwilliam"><i class="fab fa-youtube"></i></a>
-            </span>
         </ul>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fataiwilliam/"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/3qEkIPqShQZl3onm6eQwQH?si=Y4eeMEcQRDyzdEx_ZM0leg" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="http://www.youtube.com/@fataiwilliam"><i class="fab fa-youtube"></i></a>
+        </div>
     </nav>
+    
     
     
     <Section id="carousel" >
@@ -39,7 +40,7 @@
                 div -->
                 <div class="carousel-slide">
                     <video autoplay loop muted playsinline>
-                        <source src="images/Colorful Blue and Purple Animated YouTube Outro.mp4" type="video/mp4">
+                        <source src="images/Colorful Blue and Purple Animated YouTube Outro (1).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <button class="action-btn" onclick="location.href='about.html';">About Us</button> <!-- Example action button -->
@@ -56,7 +57,7 @@
                 </div>
                 <div class="carousel-slide">
                     <video autoplay loop muted playsinline>
-                        <source src="images/8figure MErch (2).mp4" type="video/mp4">
+                        <source src="images/8figure MErch (3).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <button class="action-btn" onclick="location.href='about.html';">Merchandise Store</button> <!-- Example action button -->
@@ -166,58 +167,3 @@
 
 
 
-BEGIN
-
-  // Include necessary headers
-  INCLUDE <iostream>
-  INCLUDE <thread>
-  INCLUDE <mutex>
-
-  // Define a mutex for synchronizing access to shared resources
-  DECLARE mtx AS std::mutex
-
-  // Define the function for thread 1 to count up to 20
-  FUNCTION countUp()
-    FOR i FROM 0 TO 20 DO
-      LOCK mtx USING std::lock_guard<std::mutex>
-      PRINT "Count Up: " + i
-    END FOR
-  END FUNCTION
-
-  // Define the function for thread 2 to count down to 0
-  FUNCTION countDown()
-    FOR i FROM 20 TO 0 STEP -1 DO
-      LOCK mtx USING std::lock_guard<std::mutex>
-      PRINT "Count Down: " + i
-    END FOR
-  END FUNCTION
-
-  // Main function
-  FUNCTION main()
-    TRY
-      // Create and start the first thread to run countUp function
-      DECLARE t1 AS std::thread(countUp)
-      
-      // Wait for the first thread to finish
-      CALL t1.join()
-      
-      // Create and start the second thread to run countDown function
-      DECLARE t2 AS std::thread(countDown)
-      
-      // Wait for the second thread to finish
-      CALL t2.join()
-    CATCH SYSTEM_ERROR e
-      PRINT "System error: " + e.what()
-      RETURN 1
-    CATCH EXCEPTION e
-      PRINT "Exception: " + e.what()
-      RETURN 1
-    CATCH ANY
-      PRINT "Unknown error occurred."
-      RETURN 1
-    END TRY
-
-    RETURN 0
-  END FUNCTION
-
-END

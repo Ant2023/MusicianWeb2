@@ -28,88 +28,133 @@ main {
     background-color: var(--teal-mid);
 }
 
-/*Header begins here*/
 nav {
-    background-image: url(images/backgroundimage.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: left center;
-    color: var(--white);
-    padding: 10px 20px;
-    text-align: center;
-    z-index: 1000;
-    display: flex;
-    align-items:center;
-    justify-content:space-between;
-    background: rgba(0, 0, 0, 10); /* Adjusted for semi-transparency */
-
-    
-  }
-  nav .mainMenu {
-    display: flex;
-    list-style: none;
-  }
-  nav .mainMenu li a {
-    display: inline-block;
-    padding: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    font-family: 'Futura';
-    font-size: 18px;
-    font-weight: 700;
-    transition: 0.2s ease;
-  }
-  nav .mainMenu li a:hover {
-    background:#014034;
-  }
-  nav .openMenu {
-    font-size: 2rem;
-    margin: 20px;
-    display: none;
-    cursor: pointer;
-  }
-  nav .mainMenu .closeMenu,
-  .icons i {
-    font-size: 2rem;
-    display: none;
-    cursor: pointer;
     color: white;
-  }
-  .fa-facebook-f:hover {
-    color: #4267B2;
-  }
-  .fa-instagram:hover {
-    color: rgb(255, 0, 191);
-}
-  .fa-spotify:hover {
-    color:#1DB954;
-}
-
-.fa-youtube:hover {
-    color: #FF0000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
 }
 
+
+nav .logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav .mainMenu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav .mainMenu li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav .openMenu, nav .closeMenu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav .social-icons a {
+    margin: 0 5px;
+    color: white;
+}
+
+nav .mainMenu li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent; /* Ensure background is transparent initially */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+}
+
+nav .mainMenu li a:hover, nav .mainMenu li a:focus {
+    background-color: #014034; /* Dark green for hover */
+    color: #FFD700; /* Gold color for text on hover */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+}
+
+/* Adding focus style for accessibility */
+nav .mainMenu li a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5); /* Gold focus ring */
+}
+
+/* Styling for social media icons */
+nav .social-icons a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav .social-icons a:hover, nav .social-icons a:focus {
+    color: #FFD700; /* Gold color on hover/focus */
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    nav .mainMenu { display: none; }
+    nav .openMenu { display: block; }
+    nav .social-icons { display: none; }
+    .mainMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav .mainMenu.expanded {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transform: translateY(0);
+        position: absolute;
+        top: 60px; /* Height of the nav bar */
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    nav .closeMenu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+}
+
+
+
+/* Logo Styles */
 .logo img {
     width: 43%;
-    max-width: 200px; /* Ensures the logo doesn't get too large */
+    max-width: 200px;
     height: auto;
-    animation-name: rotateLogo;
-    animation-duration: 2s;   /* Duration of the rotation */
-    animation-timing-function: ease-in-out;
-    animation-delay: 3s;      /* Delays the start of the animation by 3 seconds */
-    animation-fill-mode: forwards; /* Keeps the logo at the end state of the animation */
-
     animation: logoEntrance 2s ease-out;
-    transition: transform 0.3s ease, filter 0.3s ease;
 }
- 
-/* .logo img:hover 
-    transform: scale(1.1); 
-    filter: brightness(1.2); */
+
 
 @keyframes logoEntrance {
-    0% {
+    from {
         transform: scale(0);
         opacity: 0;
     }
@@ -123,43 +168,6 @@ nav {
     }
 }
 
-@keyframes rotateLogo {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-nav .logo {
-    margin: 6px;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-    .mainMenu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Adjust based on your header's height */
-        left: 0;
-        background-color: #333;
-        padding-bottom: 10px;
-    }
-
-    .openMenu, .closeMenu {
-        display: block;
-    }
-
-    .closeMenu {
-        position: absolute;
-        top: 0;
-        right: 20px;
-    }
-}
 
 
 #carousel {
@@ -217,7 +225,7 @@ nav .logo {
 
 .action-btn {
     position: absolute;
-    top: 70%;
+    top: 85%;
 
     background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
     margin-top: 20px; /* Space between the video and the button */
@@ -637,6 +645,62 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Press Release */
+
+/* Press Releases Section Styling */
+.press-releases {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.press-releases .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.press-releases .section-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.press-releases .press-release {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.press-releases .release-title {
+    font-size: 1.5rem;
+    color: #014034; /* Dark green for contrast */
+}
+
+.press-releases .release-date {
+    font-style: italic;
+    color: #666;
+}
+
+.press-releases .release-summary {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.press-releases .read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #014034;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.press-releases .read-more:hover {
+    background-color: #012d26;
+}
 
 @media (max-width: 600px) {
     .gallery-grid {
@@ -674,13 +738,6 @@ h2 {
 }
 
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensures no spillover */
-}
 
 .hero-container {
     position: relative;
@@ -748,14 +805,7 @@ img {
     height: auto;
 }
 @media (max-width: 768px) {
-    nav {
-        height: 80px;
-    }
-    nav .logo {
-        width: 110px;
-        height: auto;
-
-    }
+   
     .footer-content {
         flex-direction: column;
         align-items: stretch;
@@ -777,9 +827,6 @@ img {
         padding: 20px;
         font-size: 1.1rem;
     }
-    nav .mainMenu {
-        margin-top: 0;
-    }
     
 }
 
@@ -789,39 +836,7 @@ img {
     .merch, .music {
         margin: 20px;
     }
-    nav .mainMenu {
-      height: 100vh;
-      position: fixed;
-      top: 0px;
-      right: 0px;
-      left: 0px;
-      z-index: 10;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background:#000000;
-      transition: top 1s ease 0s;
-      display: none;
-      margin-top: 0;
-    }
-    nav .mainMenu .closeMenu {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    nav .openMenu {
-      display: block;
-    }
-
-    nav .mainMenu li a:hover {
-      background: none;
-      color: rgb(95, 0, 0);
-    }
-    .icons i {
-      display: inline-block;
-      padding: 12px;
-    }
+    
   }
 
   @media (max-width: 500px) {

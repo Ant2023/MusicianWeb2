@@ -67,3 +67,113 @@
             <p>&copy; 2024 8Figure. All rights reserved.Website by AIG Global Business</p>
         </div>
     </footer>
+
+
+    nav {
+    background-image: url(images/backgroundimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: left center;
+    color: var(--white);
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    background: rgba(0, 0, 0, 10); /* Adjusted for semi-transparency */
+
+    
+  }
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-family: 'Futura';
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+  nav .mainMenu li a:hover {
+    background:#014034;
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: white;
+  }
+  .fa-facebook-f:hover {
+    color: #4267B2;
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 0, 191);
+}
+  .fa-spotify:hover {
+    color:#1DB954;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+}
+
+.logo img {
+    width: 43%;
+    max-width: 200px; /* Ensures the logo doesn't get too large */
+    height: auto;
+    animation-name: rotateLogo;
+    animation-duration: 2s;   /* Duration of the rotation */
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;      /* Delays the start of the animation by 3 seconds */
+    animation-fill-mode: forwards; /* Keeps the logo at the end state of the animation */
+
+    animation: logoEntrance 2s ease-out;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+ 
+/* .logo img:hover 
+    transform: scale(1.1); 
+    filter: brightness(1.2); */
+
+@keyframes logoEntrance {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
