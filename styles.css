@@ -304,6 +304,84 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     text-align: center;
     font-size:2.5rem;
 }
+
+#events-preview {
+    background-color: #2C3531; /* A dark slate gray background */
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/event-background\ 1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#events-preview .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#events-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-preview {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-info {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 20px;
+    text-align: left;
+}
+
+.event-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.event-info .event-date {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.event-info .event-button {
+    display: inline-block;
+    background-color: #116466; /* Deep Cyan */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.event-info .event-button:hover {
+    background-color: #FFCB9A; /* Sandy */
+    color: #2C3531;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr; /* Stack events on smaller screens */
+    }
+}
+
 .music {
     text-align: center;
     font-size: 1.8rem;
