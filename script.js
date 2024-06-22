@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll('.carousel-slide');
     let index = 0;
-    const intervalTime = 3000; // time in milliseconds
+    const intervalTime = 4000; // time in milliseconds
 
     function showSlide(i) {
         index = i;

@@ -26,9 +26,8 @@ body {
     font-family: 'Futura', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-primary);
     color: white;
-    mix-blend-mode: multiply;
     
 }
 
