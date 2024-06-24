@@ -17,7 +17,7 @@
 }
 
 /* General Body Styles */
-body {
+body, html {
     background-image: url(images/backgroundimage.jpg);
     position: right center;
     background-size: cover;
@@ -26,6 +26,7 @@ body {
     font-family: 'Futura', sans-serif;
     margin: 0;
     padding: 0;
+    max-width: 100;
     background-color: var(--color-primary);
     color: white;
     
@@ -116,49 +117,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     color: #FFD700; /* Gold color on hover/focus */
     cursor: pointer;
 }
-
-
-@media (max-width: 768px) {
-    nav .mainMenu { display: none; }
-    nav .openMenu { display: block; }
-    nav .social-icons { display: none; }
-    .mainMenu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    nav .mainMenu.expanded {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        transform: translateY(0);
-        position: absolute;
-        top: 20px; /* Height of the nav bar */
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-    }
-    nav .logo img {
-        width: 65px;
-    }
-    nav .closeMenu {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-    }
-}
-
-
 
 /* Logo Styles */
 .logo img {
@@ -255,9 +213,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
-
-
-
 .action-btn:hover {
     background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
 }
@@ -376,11 +331,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     color: #2C3531;
 }
 
-@media (max-width: 768px) {
-    .events-grid {
-        grid-template-columns: 1fr; /* Stack events on smaller screens */
-    }
-}
+/* Music Page */
 
 .music {
     text-align: center;
@@ -795,43 +746,6 @@ h2 {
     background-color: #012d26;
 }
 
-@media (max-width: 600px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-}
-
-@media (max-width: 400px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Stacks images on very small screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .timeline-item {
-        flex-direction: column;
-        align-items: center;
-    }
-    .timeline-icon {
-        font-size: 30px;
-        margin-bottom: 20px;
-        flex: 0 0 30px; /* Adjusted to smaller size for better fit */
-        height: 30px; /* Keep it proportional */
-        padding: 10px
-    }
-    
-    .timeline-content {
-        margin-left: 0;
-        text-align: center;
-    }
-    
-    .timeline-content:before {
-        content: none;
-    }
-}
-
-
-
 .hero-container {
     position: relative;
     width: 100%;
@@ -873,18 +787,6 @@ header .tagline {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .hero-image {
-        height: 100vh;
-        object-fit: cover;
-    }
-    .biography p, .timeline h2, .media-gallery h2, .discography h2, .press p {
-        padding: 10px;
-    }
-}
-
-
-
 .social-links a {
     margin: 0 10px;
     font-size: 2rem;
@@ -896,34 +798,6 @@ header .tagline {
 img {
     max-width: 100%;
     height: auto;
-}
-@media (max-width: 768px) {
-   
-    .footer-content {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .action-btn {
-        top: 63%;
-    }
-    .carousel-container video {
-        height: auto;
-    }
-    .carousel-container {
-        height: 600px;
-        margin-bottom: 20px;
-    }
-
-    .merch, .music {
-        margin: 20px;
-    }
-
-
-    #welcome p{
-        padding: 20px;
-        font-size: 1.1rem;
-    }
-    
 }
 
 @media (max-width: 800px) {
@@ -945,7 +819,18 @@ img {
     }
   }
 
-  
+  @media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stacks images on very small screens */
+    }
+}
+
 
   .intro-section {
     text-align: center;
@@ -1061,31 +946,130 @@ img {
 }
 
 @media (max-width: 768px) {
+
+  /* Navbar Section */
+nav .mainMenu { display: none; }
+nav .openMenu { display: block; }
+nav .social-icons { display: none; }
+.mainMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav .mainMenu.expanded {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: translateY(0);
+    position: absolute;
+    top: 20px; /* Height of the nav bar */
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+}
+nav .logo img {
+    width: 65px;
+}
+nav .closeMenu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Main Section */
+.action-btn {
+    top: 63%;
+}
+.carousel-container video {
+    height: auto;
+}
+.carousel-container {
+    height: 600px;
+    margin-bottom: 20px;
+}
+.events-grid {
+    grid-template-columns: 1fr; /* Stack events on smaller screens */
+}
+/* Merch Section */
+
+.merch, .music {
+    margin: 20px;
+}
+
+#welcome p{
+    padding: 20px;
+    font-size: 1.1rem;
+}
+    /* Footer Section */
+    .footer-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+/* About Page */
+.hero-image {
+    height: 100vh;
+    object-fit: cover;
+}
+.biography p, .timeline h2, .media-gallery h2, .discography h2, .press p {
+    padding: 10px;
+}
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-icon {
+        font-size: 30px;
+        margin-bottom: 20px;
+        flex: 0 0 30px; /* Adjusted to smaller size for better fit */
+        height: 30px; /* Keep it proportional */
+        padding: 10px
+    }
+    
+    .timeline-content {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .timeline-content:before {
+        content: none;
+    }
+    /* Music Page */
+    
     .videos {
         flex-direction: column;
     }
-}
-
-@media (max-width: 768px) {
     .albums, .singles {
         flex-direction: column;
         align-items: center;
     }
+    
 }
-
-
 
 @media (max-width: 480px) {
     .action-btn {
         top: 56%;
     }
-    .carousel-container video {
-        height: auto;
+    .carousel-slide video {
+        height: 100%;
     }
     .carousel-container {
         height: 600px;
+        margin-bottom: 60px;
     }
-   
+
+
     .logo {
         max-width: 120px; /* Even smaller logo for mobile screens */
     }
@@ -1103,7 +1087,6 @@ img {
     h2 {
         font-size: 2em; /* Slightly smaller font size for the heading */
     }
-
     .timeline-icon {
         font-size: 16px; /* Smaller icon size */
     }
