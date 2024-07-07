@@ -1,30 +1,45 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    let index = 0;
-    const intervalTime = 4000; // time in milliseconds
+const carouselContainer = document.querySelector('.carousel-container');
+const slides = document.querySelectorAll('.carousel-slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentIndex = 0;
+let autoSlideInterval;
 
-    function showSlide(i) {
-        index = i;
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
-        document.querySelector('.carousel-container').style.transform = `translateX(-${index * 100}%)`;
-    }
+function updateCarousel() {
+    const slideWidth = slides[currentIndex].clientWidth;
+    carouselContainer.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+}
 
-    function startSlide() {
-        setInterval(() => {
-            showSlide(index + 1);
-        }, intervalTime);
-    }
 
-    startSlide(); // Start the automatic sliding
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }, 4000); // 4 seconds interval
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+    resetAutoSlide();
 });
 
-document.querySelectorAll('.action-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        alert("Button clicked!");
-        // Add your action here, e.g., open a modal, change the view, etc.
-    });
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+    resetAutoSlide();
 });
+
+window.addEventListener('resize', updateCarousel);
+
+// Start the automatic slide on page load
+startAutoSlide();
+updateCarousel();
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
@@ -40,12 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 document.querySelector('.logo img').addEventListener('click', function() {
     this.classList.toggle('rotated');
     setTimeout(function() {
         const logo = document.querySelector('.logo img');
         logo.style.transform = 'rotate(360deg)';
     }, 3000); // Delays the animation by 3 seconds
+});
+
+document.getElementById('music').querySelector('h2').addEventListener('click', function() {
+    this.textContent = 'You clicked the Music header!';
 });

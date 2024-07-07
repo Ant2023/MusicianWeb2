@@ -16,9 +16,156 @@
     --color-quinary: #D1E8E2; /* Pale Robin Egg Blue */
 }
 
+/* Common styles for all section headers */
+section h2 {
+    font-family: 'Futura';
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    cursor: pointer; /* Changes cursor to a pointer to indicate it's clickable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section h2:hover {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Change gradient on hover */
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+section h2:active {
+    background: linear-gradient(to right, #ff4e50, #f9d423); /* Change gradient when clicked */
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.05); /* Slightly reduce the scale when clicked for a pressed effect */
+}
+
+section{
+    margin-bottom: 40px;
+}
+#test {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.test-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.test-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners */
+    object-fit: cover; /* Ensure video covers the entire area */
+}
+
+.test-action-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: 'Futura';
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .test-action-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-action-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+
+#test {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+.test-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.test-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners */
+    object-fit: cover; /* Ensure video covers the entire area */
+}
+
+.test-action-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: 'Futura';
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .test-action-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-action-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
 /* General Body Styles */
-body, html {
-    background-image: url(images/backgroundimage.jpg);
+body {
+    /* background-image: url(images/backgroundimage.jpg); */
     position: right center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,13 +174,9 @@ body, html {
     margin: 0;
     padding: 0;
     max-width: 100;
-    background-color: var(--color-primary);
+    background-color:#000;
     color: white;
     
-}
-
-main {
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav {
@@ -146,7 +289,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 #carousel {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.10);
     font-family: 'Futura';
 }
 .carousel {
@@ -163,10 +306,10 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     display: flex;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    
 }
 
 .carousel-slide {
-
     flex: 0 0 100%;
     max-width: 100%;
     position: relative; /* Needed for positioning the buttons */
@@ -199,7 +342,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 .action-btn {
     position: absolute;
-    top: 85%;
+    top: 70%;
     background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
     margin-top: 20px; /* Space between the video and the button */
     padding: 10px 20px;
@@ -250,11 +393,18 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     color: var(--white);
 }
 
-
 .image1 img {
     height: auto;
     width: 100%;
+    
 }
+
+.music {
+
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
 #welcome h2 {
     text-align: center;
     font-size:2.5rem;
@@ -301,6 +451,8 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 }
 
+
+
 .event-info {
     width: 100%;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
@@ -338,12 +490,44 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 /* Music Page */
 
 .music {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
     font-size: 1.8rem;
-    margin: 20px 40px;
+    margin: 20px ;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.music h2 {
-    margin-bottom: 40px;
+
+
+#music h2 {
+    font-family: 'Futura';
+    font-weight: 900;
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer; /* Changes cursor to a pointer to indicate it's clickable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+#music h2:hover {
+    background: linear-gradient(to right, yellow, #2575fc); /* Change gradient on hover */
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+#music h2:active {
+    background: linear-gradient(to right, #ff4e50, #f9d423); /* Change gradient when clicked */
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.05); /* Slightly reduce the scale when clicked for a pressed effect */
 }
 .music p {
     font-family:'Futura';
@@ -354,7 +538,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 }
 .merch {
     font-family: 'Futura';
-
     margin: 20px 40px;
 }
 /* Sections: Music, Events, Merch */
@@ -365,7 +548,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     color: var(--white); /* White text for good contrast */
     border-bottom: 3px solid var(--teal-dark); /* Dark Teal border for visual separation */
 }
-
 
 .videos h1 {
     background: rgba(0, 0, 0, 0.5); /* Adjusted for semi-transparency */
@@ -798,7 +980,6 @@ header .tagline {
 
 /* Responsive adjustments for better viewing on smaller devices */
 
-
 img {
     max-width: 100%;
     height: auto;
@@ -824,14 +1005,29 @@ img {
   }
 
   @media (max-width: 600px) {
+    nav {
+        position: relative; /* Change to relative positioning */
+    }
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
+    .carousel-slide video {
+        height: 100vh; /* Ensure video takes up full viewport height */
+        width: 100%; /* Ensure video takes up full width */
+        object-fit: cover; /* Ensure video covers the entire area */
+    }
+
 }
 
 @media (max-width: 400px) {
     .gallery-grid {
         grid-template-columns: 1fr; /* Stacks images on very small screens */
+    }
+    
+    .carousel-slide video {
+        height: 55vh; /* Ensure video takes up full viewport height */
+        width: 100%; /* Ensure video takes up full width */
+        object-fit: cover; /* Ensure video covers the entire area */
     }
 }
 
@@ -897,8 +1093,6 @@ img {
     margin: 20px;
     flex-wrap: wrap;
 }
-
-
 .album, .single {
     background-color: #ffffff;  /* White background to blend with Spotify's default theme */
     padding: 10px;
@@ -949,6 +1143,8 @@ img {
     margin-top: 10px;
 }
 
+
+
 @media (max-width: 768px) {
 
   /* Navbar Section */
@@ -994,11 +1190,8 @@ nav .closeMenu {
 .action-btn {
     top: 63%;
 }
-.carousel-container video {
-    height: auto;
-}
+
 .carousel-container {
-    height: 600px;
     margin-bottom: 20px;
 }
 .events-grid {
@@ -1065,14 +1258,7 @@ nav .closeMenu {
     .action-btn {
         top: 56%;
     }
-    .carousel-slide video {
-        height: 100%;
-    }
-    .carousel-container {
-        height: 600px;
-        margin-bottom: 70px;
-    }
-
+    
     .logo {
         max-width: 120px; /* Even smaller logo for mobile screens */
     }
