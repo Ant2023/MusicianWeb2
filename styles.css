@@ -576,13 +576,137 @@ section .glitch-con h2.section-title {
     transform: skew(-0.2deg);
   }
 }
-
-.music iframe {
-  border-radius: 12px;
+.music {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+    margin: 20px;
+    justify-content: space-between;
 }
 
+.music-text {
+    text-align: center;
+    font-family: 'Futura';
+    color: #f8f8f8;
+    flex: 1 1 45%; /* Text takes up 45% of the width */
+}
 
+.music-text h3 {
+    margin: 25px;
+}
 
+.action-btn2 {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #fff; /* White border */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 1.2rem; /* Font size */
+    font-family: 'Futura', sans-serif; /* Font family */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Ensure it behaves like a button */
+}
+
+.action-btn2:hover, .action-btn2:focus {
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+    outline: none; /* Remove outline on focus */
+}
+
+iframe {
+    flex: 1 1 45%; /* Iframe takes up 45% of the width */
+    max-width: 100%;
+    height: 352px; /* Default height */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFD700; /* Gold color for the title */
+}
+
+.gallery-container {
+    margin:20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(25% - 40px); /* Four items per row, adjust as needed */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%; /* One item per row on very small screens */
+    }
+}
+
+.image1 {
+    margin: 20px;
+}
+.image1 image {
+    width: 100%;
+}
+.image1 h4{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .music {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .music-text, iframe {
+        flex: 1 1 100%; /* Items take up 100% width on smaller screens */
+    }
+    iframe {
+        height: 352px; /* Maintain height for smaller screens */
+    }
+}
+@media (max-width: 500px) {
+    .action-btn2 {
+        margin-bottom: 20px;
+    }
+    
+    .music-text h3 {
+        font-size: 1.6rem;
+    
+    }
+    .music-text p {
+        font-size: 1rem;
+    }
+}
 
 /* General Body Styles */
 body {
@@ -599,6 +723,10 @@ body {
     color: white;
     
 }
+.about-navbar nav {
+    position: relative;
+}
+
 
 nav {
     color: white;
@@ -769,7 +897,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     padding: 10px 20px;
     margin-bottom: 50px;
     font-size: 1.2rem;
-    font-family: 'Futura';
     color: white;
     background-color: transparent;
     border: 1px solid white; /* Adding white border */
@@ -1179,6 +1306,11 @@ footer {
     font-family: 'Arial', sans-serif;
 }
 
+.biography {
+    font-family: 'Futura';
+    line-height: 1.6;
+    font-size: 1rem;
+}
 .container {
     width: 90%;
     margin: 0 auto;

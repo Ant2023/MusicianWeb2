@@ -66,3 +66,14 @@ document.querySelector('.logo img').addEventListener('click', function() {
 document.getElementById('music').querySelector('h2').addEventListener('click', function() {
     this.textContent = 'You clicked the Music header!';
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            alert('You clicked on ' + item.querySelector('img').alt);
+        });
+    });
+});
+
