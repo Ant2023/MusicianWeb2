@@ -591,9 +591,7 @@ section .glitch-con h2.section-title {
     flex: 1 1 45%; /* Text takes up 45% of the width */
 }
 
-.music-text h3 {
-    margin: 25px;
-}
+
 
 .action-btn2 {
     background-color: transparent; /* Transparent background */
@@ -618,7 +616,6 @@ section .glitch-con h2.section-title {
 iframe {
     flex: 1 1 45%; /* Iframe takes up 45% of the width */
     max-width: 100%;
-    height: 352px; /* Default height */
 }
 
 .section-title {
@@ -682,6 +679,76 @@ iframe {
     text-align: center;
 }
 
+
+.test-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.test-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.merch-items {
+    font-family: 'Futura';
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.merch-item {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.merch-item img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.merch-item h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.merch-item p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.merch-item:hover {
+    transform: scale(1.05);
+}
+
+.shop-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: 'Futura', sans-serif;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
 /* Media query for smaller devices */
 @media (max-width: 768px) {
     .music {
@@ -690,28 +757,23 @@ iframe {
     .music-text, iframe {
         flex: 1 1 100%; /* Items take up 100% width on smaller screens */
     }
-    iframe {
-        height: 352px; /* Maintain height for smaller screens */
-    }
 }
 @media (max-width: 500px) {
-    .action-btn2 {
-        margin-bottom: 20px;
-    }
     
     .music-text h3 {
         font-size: 1.6rem;
     
     }
     .music-text p {
-        font-size: 1rem;
+        font-size:12px ;
+        margin-top: 20px;
     }
 }
 
 /* General Body Styles */
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-    url('images/backgroundimage.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('images/background-image2.jpg');
     background-size: cover; /* Ensure the image covers the whole background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background image fixed while scrolling */
