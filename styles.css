@@ -265,7 +265,6 @@
   .merch-image img {
     display: block; /* Ensure the image is treated as a block-level element */
     margin: 40px auto; /* Apply vertical margin and center horizontally */
-    max-width: calc(100% - 40px); /* Ensure the image does not exceed the container width minus the total horizontal margin */
 }
   
   #test {
