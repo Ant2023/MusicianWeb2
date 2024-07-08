@@ -1879,13 +1879,11 @@ nav .closeMenu {
     
 }
 @media (max-width: 480px) {
+
     body {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url('images/background-image2.jpg') center center fixed; 
-        background-size: cover; /* Ensure the image covers the whole background */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-        font-size: 14px; /* Smaller font size for body text */
+        background-size: contain;
     }
+
     .action-btn {
         top: 56%;
     }
