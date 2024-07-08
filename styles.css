@@ -726,6 +726,7 @@ iframe {
     font-family: "Londrina Outline", cursive;
     margin-top: 15px;
     font-size: 1.5rem;
+    font-weight: 900;
 }
 
 .merch-item p {
@@ -791,6 +792,7 @@ body {
     max-width: 100;
     background-color:#000;
     color: white;
+    height: 100%;
     
 }
 .about-navbar nav {
