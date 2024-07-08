@@ -590,8 +590,14 @@ section .glitch-con h2.section-title {
     color: #f8f8f8;
     flex: 1 1 45%; /* Text takes up 45% of the width */
 }
+.music-text h3 {
+    font-family: "Londrina Outline", cursive;
+}
 
+.music-text p {
+    font-family: 'Futura';
 
+}
 
 .action-btn2 {
     background-color: transparent; /* Transparent background */
@@ -692,7 +698,6 @@ iframe {
 }
 
 .merch-items {
-    font-family: 'Futura';
 
     display: flex;
     justify-content: center;
@@ -712,17 +717,19 @@ iframe {
 }
 
 .merch-item img {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
 .merch-item h3 {
+    font-family: "Londrina Outline", cursive;
     margin-top: 15px;
     font-size: 1.5rem;
 }
 
 .merch-item p {
+    font-family: 'Futura';
     font-size: 1rem;
     color: #ddd;
 }
@@ -772,7 +779,7 @@ iframe {
 
 /* General Body Styles */
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
     url('images/background-image2.jpg');
     background-size: cover; /* Ensure the image covers the whole background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -797,7 +804,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     position: absolute;
     width: 100%;
     top: 0;
@@ -1870,6 +1877,11 @@ nav .closeMenu {
     
 }
 @media (max-width: 480px) {
+    body {
+        background-size: cover; /* Ensure the background image covers the viewport */
+        background-position: center; /* Center the background image */
+        font-size: 14px; /* Smaller font size for body text */
+    }
     .action-btn {
         top: 56%;
     }
