@@ -1,3 +1,159 @@
+
+
+
+/* Common styles for all section headers */
+section h2 {
+    font-family: 'Futura';
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    cursor: pointer; /* Changes cursor to a pointer to indicate it's clickable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section h2:hover {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Change gradient on hover */
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+section h2:active {
+    background: linear-gradient(to right, #ff4e50, #f9d423); /* Change gradient when clicked */
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.05); /* Slightly reduce the scale when clicked for a pressed effect */
+}
+
+section{
+    margin-bottom: 40px;
+}
+
+
+#test {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.test-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.test-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners */
+    object-fit: cover; /* Ensure video covers the entire area */
+}
+
+.test-action-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: 'Futura';
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .test-action-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-action-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+
+#test {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+.test-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.test-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners */
+    object-fit: cover; /* Ensure video covers the entire area */
+}
+
+.test-action-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: 'Futura';
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .test-action-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-action-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+
+
+
+
 <body id="about-body">
     <nav>
         <div class="logo"><img src="images/8 Figure_2nd Alternative Logo Vertical (Full).png" alt=""></a></div>
