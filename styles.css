@@ -1880,6 +1880,7 @@ nav .closeMenu {
 }
 @media (max-width: 480px) {
     body {
+        background: url('images/background-image2.jpg') no-repeat center center fixed;
         background-size: cover; /* Ensure the background image covers the viewport */
         background-position: center; /* Center the background image */
         font-size: 14px; /* Smaller font size for body text */
