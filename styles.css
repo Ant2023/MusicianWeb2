@@ -889,6 +889,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 .prev { left: 10px; }
 .next { right: 10px; }
 
+
 .action-btn {
     position: absolute;
     top: 70%;
@@ -907,7 +908,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 .action-btn:hover {
     background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
 }
-
 
 .button {
     font-family: 'Futura';
