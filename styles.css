@@ -1181,7 +1181,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
     line-height: 1.6;
     padding: 50px 20px;
-    background: rgba(255, 0, 0, 0.1); /* Reddish transparent background */
+    background: rgba(0, 0, 0, 0.5); /* Reddish transparent background */
     color: white;
     text-align: center;
 }
@@ -1370,7 +1370,111 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     gap: 20px;
     flex-wrap: wrap;
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.navbar {
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-family: 'Futura';
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.music-icons {
+    display: flex;
+}
+
+.music-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.music-icons a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .music-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-background video {
+        object-fit: contain; /* Adjust object-fit to contain for small screens */
+    }
+    .nav-links a {
+        font-size: 1rem; /* Adjust font size for small screens */
+    }
+    .logo img {
+        width: 80px; /* Adjust logo size for small screens */
+    }
+}
 
 #music h2 {
     font-family: 'Futura';
@@ -1454,7 +1558,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.5); /* Dark charcoal background */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark charcoal background */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -1957,13 +2061,15 @@ img {
 }
 
 .music-section {
+    background-color: rgba(0, 0, 255, 0.1);
     text-align: center;
     padding: 20px;
 }
 
 .music-section h2 {
-    color: #333;
-    margin-bottom: 20px;
+    font-family: 'Futura';
+    color: #fff;
+    margin-bottom: 30px;
 }
 
 .albums, .singles .videos {
@@ -1988,11 +2094,12 @@ img {
 .music-video-section {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f0f0f0;  /* A slightly different background for visual separation */
+    background-color: rgba(255, 0, 0, 0.1);  /* A slightly different background for visual separation */
 }
 
 .music-video-section h2 {
-    color: #333;
+    font-family: 'Futura';
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -2004,7 +2111,7 @@ img {
 }
 
 .video {
-    background-color: #ffffff;
+    background-color: #000;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
