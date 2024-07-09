@@ -592,6 +592,7 @@ section .glitch-con h2.section-title {
     flex: 1 1 45%; /* Text takes up 45% of the width */
 }
 .music-text h3 {
+    background-color:rgba(0,0,0,0.2) ;
     font-family: "Londrina Outline", cursive;
 }
 
@@ -1052,6 +1053,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 /* Events Section Styles */
 #events-preview {
+    font-family: 'Futura';
     background: rgba(255, 0, 0, 0.1); /* Reddish color with 50% transparency */
     padding: 50px 20px;
     color: white;
@@ -1086,7 +1088,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 }
 
 .event-info {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    background: rgba(86, 67, 41, 0.5); /* Semi-transparent overlay */
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -1095,7 +1097,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 .event-info h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #FFD700; /* Gold color for event title */
+    color: #fff; /* Gold color for event title */
 }
 
 .event-info .event-date, .event-info .event-location {
@@ -1106,7 +1108,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 .event-info .event-button {
     display: inline-block;
-    background-color: #da9656; /* Deep Cyan */
+    background-color: #fff; /* Deep Cyan */
     color: #000;
     text-decoration: none;
     padding: 10px 15px;
@@ -1172,6 +1174,109 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     .event-info .event-button {
         padding: 6px 10px; /* Further reduce padding for button */
         font-size: 0.8rem; /* Smaller font size for button */
+    }
+}
+
+#contact {
+
+    line-height: 1.6;
+    padding: 50px 20px;
+    background: rgba(255, 0, 0, 0.1); /* Reddish transparent background */
+    color: white;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFD700; /* Gold color for the title */
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-details, .contact-form {
+    font-family: 'Futura';
+    flex: 1 1 calc(50% - 20px);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.contact-details ul li i {
+    margin-right: 10px;
+    color: #FFD700; /* Gold icons */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff; /* Gold labels */
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+}
+
+.contact-btn {
+    background-color: #000; /* Transparent background */
+    border: 2px solid #f0efec; /* Gold border */
+    color: #fff; /* Gold text */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 1.2rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.contact-btn:hover, .contact-btn:focus {
+    background-color: #FFD700; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-details, .contact-form {
+        flex: 1 1 100%;
     }
 }
 
@@ -1362,7 +1467,6 @@ footer {
     max-width: 1200px;
     margin: auto;
 }
-
 .footer-section {
     margin: 10px;
     line-height: 1.6;
