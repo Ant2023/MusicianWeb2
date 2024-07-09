@@ -698,7 +698,6 @@ iframe {
 }
 
 .merch-items {
-
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -707,6 +706,7 @@ iframe {
 
 .merch-item {
     flex: 1 1 calc(50% - 20px); /* Two items per row */
+
     margin: 10px;
     text-align: center;
     border-radius: 10px;
@@ -1049,8 +1049,134 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     font-size:2.5rem;
 }
 
+/* Events Section Styles */
 #events-preview {
-    background-color: #2C3531; /* A dark slate gray background */
+    background: rgba(255, 0, 0, 0.1); /* Reddish color with 50% transparency */
+    padding: 50px 20px;
+    color: white;
+}
+
+#events-preview .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#events-preview .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.event-preview {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-info {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.event-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #FFD700; /* Gold color for event title */
+}
+
+.event-info .event-date, .event-info .event-location {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #ccc; /* Light gray color for date and location */
+}
+
+.event-info .event-button {
+    display: inline-block;
+    background-color: #da9656; /* Deep Cyan */
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.event-info .event-button:hover {
+    background-color: #FFCB9A; /* Sandy */
+    color: #2C3531;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .event-preview {
+        height: 250px; /* Reduce height of event preview */
+    }
+
+    .event-info {
+        padding: 15px; /* Reduce padding inside event info */
+    }
+
+    .event-info h3 {
+        font-size: 1.2rem; /* Smaller font size for event title */
+    }
+
+    .event-info .event-date, .event-info .event-location {
+        font-size: 1rem; /* Smaller font size for date and location */
+    }
+
+    .event-info .event-button {
+        padding: 8px 12px; /* Reduce padding for button */
+        font-size: 0.9rem; /* Smaller font size for button */
+    }
+}
+
+@media (max-width: 480px) {
+    #events-preview .section-title {
+        font-size: 2rem; /* Smaller font size for section title */
+        margin-bottom: 5px; /* Reduce margin below title */
+    }
+    .events-grid {
+        gap: 10px;
+    }
+
+    .event-preview {
+        height: 200px; /* Further reduce height of event preview */
+    }
+
+    .event-info h3 {
+        font-size: 1rem; /* Smaller font size for event title */
+    }
+
+    .event-info .event-date, .event-info .event-location {
+        font-size: 0.9rem; /* Smaller font size for date and location */
+    }
+
+    .event-info .event-button {
+        padding: 6px 10px; /* Further reduce padding for button */
+        font-size: 0.8rem; /* Smaller font size for button */
+    }
+}
+
+
+/*#events-preview {
+    background-color: #2C3531; 
     padding: 50px 0;
     text-align: center;
     color: white;
@@ -1094,7 +1220,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 .event-info {
     width: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: left;
 }
@@ -1111,7 +1237,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 .event-info .event-button {
     display: inline-block;
-    background-color: #116466; /* Deep Cyan */
+    background-color: #116466; 
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -1121,9 +1247,9 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 }
 
 .event-info .event-button:hover {
-    background-color: #FFCB9A; /* Sandy */
+    background-color: #FFCB9A; 
     color: #2C3531;
-}
+}*/
 
 
 /* Music Page */
