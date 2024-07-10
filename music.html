@@ -8,32 +8,57 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="video-background">
-            <video autoplay muted loop playsinline>
-                <source src="images/Purple Futuristic Music Video.mp4">
-                Your browser does not support the video tag.
-            </video>
+<body id="music-body" class="music-body">
+    <nav>
+        <div class="logo">
+            <img src="images/8 Figure_2nd Alternative Logo Vertical (Full).png" alt="8 Figure Logo">
         </div>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/8 Figure_2nd Alternative Logo Vertical (Full).png" alt="8 Figure Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://linktr.ee/fataiwilliam">Music</a></li>
-                <li><a href="#">Merch</a></li>
-            </ul>
-            <div class="music-icons">
-                <a href="https://open.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
-                <a href="https://music.apple.com" target="_blank"><i class="fab fa-apple"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            </div>
-        </nav>
-    </header>
-    
+        <div class="openMenu" id="hamburger"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <!--<li><a href="#">About</a></li>-->
+            <li><a href="music.html">Music</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fataiwilliam/"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/3qEkIPqShQZl3onm6eQwQH?si=Y4eeMEcQRDyzdEx_ZM0leg" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="http://www.youtube.com/@fataiwilliam"><i class="fab fa-youtube"></i></a>
+        </div>
+    </nav>
 
+    <main>
+
+    <div class="music-section">
+        <div class="glitch-con">
+            <div class="glitch" data-text="Featured Albums">
+                <h2 class="section-title">Featured Albums</h2>
+            </div>
+    </div>
+    
+        <div class="albums">
+            <!-- Spotify Embed for Album 1 -->
+            <div class="album">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/044gj94NbvYCMz93OEkL4v?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <!-- Spotify Embed for Album 2 -->
+            <div class="album">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5C51uWGIhklMGyXWedKCrE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+    </div>
+        <!--<h2>Latest Singles</h2>
+        <div class="singles">
+            <div class="single">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0p3SM6xEMnXdnN0gxcQ1lc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="single">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7mUU7iaTyb5MNQeyCa0AIm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>-->
+    </div>
+
+</main>
     <!--<section>
         <div class="intro-section">
             <h1>Welcome to Our Music Collection</h1>
@@ -52,31 +77,6 @@
         </div>
     </section>-->
 
-    <div class="music-section">
-        <h2>Featured Albums</h2>
-        <div class="albums">
-            <!-- Spotify Embed for Album 1 -->
-            <div class="album">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/044gj94NbvYCMz93OEkL4v?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <!-- Spotify Embed for Album 2 -->
-            <div class="album">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5C51uWGIhklMGyXWedKCrE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            
-        </div>
-    
-        <!--<h2>Latest Singles</h2>
-        <div class="singles">
-            <div class="single">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0p3SM6xEMnXdnN0gxcQ1lc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <div class="single">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7mUU7iaTyb5MNQeyCa0AIm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </div>-->
-    </div>
-        
 <section>
     <div class="music-video-section">
         <h2>Music Videos</h2>
