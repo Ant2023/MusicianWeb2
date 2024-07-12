@@ -1799,10 +1799,85 @@ img {
 }
 
 .music-section {
-    background-color: rgba(0, 242, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
 }
+
+.music-main1 {
+    padding: 20px;
+    font-family: 'Futura', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFD700; /* Gold color for the title */
+}
+
+.music-grid1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.music-item1 {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px; /* Make the container have rounded corners */
+    overflow: hidden;
+    width: calc(25% - 20px); /* Four items per row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-item1 img {
+    width: 100%;
+    max-width: 200px; /* Adjust the maximum width as needed */
+    height: auto;
+    border-radius: 50%; /* Make the image round */
+    transition: transform 0.3s ease-in-out;
+}
+
+.music-item1 img:hover {
+    transform: scale(1.1);
+}
+
+.music-item1 p {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.listen-now1 {
+    color: #fff; /* Gold color */
+    text-decoration: underline;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+@media (max-width: 1024px) {
+    .music-item1 {
+        width: calc(33.33% - 20px); /* Three items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .music-item1 {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .music-item1 {
+        width: 100%; /* One item per row on very small screens */
+    }
+}
+
 
 /*.music-section h2 {
     font-family: 'Futura';
