@@ -77,3 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//artists profile
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slides img');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].style.display = 'block';
+    }
+
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+});
+

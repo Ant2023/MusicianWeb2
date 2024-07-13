@@ -379,7 +379,7 @@
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #FFD700; /* Gold color for the title */
+    /* Gold color for the title */
 }
 
 /* Merchandise Preview Section*/
@@ -1774,13 +1774,13 @@ img {
 /* Music Page */
 
 #music-body nav {
-    background-color: rgba(16, 229, 229, 0.1);
+    background-color: rgba( 100, 0, 0, 0.5);
     position: relative;
 }
 
 
 .music-section {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 10);
     text-align: center;
     padding: 20px;
 }
@@ -1790,12 +1790,6 @@ img {
     font-family: 'Futura', sans-serif;
     color: #fff;
     text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #FFD700; /* Gold color for the title */
 }
 
 .music-grid1 {
@@ -1925,6 +1919,135 @@ img {
     font-size: 1rem;
     margin-top: 10px;
 }
+
+
+/* Artists Profile*/
+
+.artist-profile {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Light transparent background */
+    color: white;
+    font-family: 'Futura', sans-serif;
+    text-align: left;
+}
+
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.artist-image-slider {
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+}
+
+.slides img:first-child {
+    display: block;
+}
+
+.artist-details {
+    max-width: 600px;
+    flex: 1;
+}
+
+.artist-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.artist-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.artist-details h3 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.artist-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.artist-details ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.artist-details ul li a {
+    color: #FFD700; /* Gold color */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.artist-details ul li a:hover {
+    color: #FFF;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #FFD700; /* Gold color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFF;
+}
+
+.booking-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #FFD700; /* Gold border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.booking-btn:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .artist-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist-details {
+        text-align: center;
+    }
+}
+
+
+
 
 
 
