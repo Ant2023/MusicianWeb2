@@ -12,11 +12,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100%;
+            position: relative;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/freepik-export-20240509133423px4Z.jpeg') center center / cover no-repeat;
             color: white;
             text-align: center;
         }
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/freepik-export-20240509133423px4Z.jpeg') center center / cover no-repeat;
+    z-index: -1;
+}
+
+
         .coming-soon-container {
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
