@@ -1771,6 +1771,7 @@ img {
     color: #333;
 }
 
+
 /* Music Page */
 
 #music-body nav {
@@ -1788,7 +1789,6 @@ img {
     background-color: rgba(0, 0, 0, 0.2);
 
     padding: 20px;
-    font-family: "Londrina Outline", cursive;
     color: #fff;
     text-align: center;
 }
