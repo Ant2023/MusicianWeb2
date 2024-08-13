@@ -34,7 +34,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/background-image2.jpg') center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('images/background-image2.jpg') center center / cover no-repeat;
     z-index: -1;
 }
 .about-navbar nav {
@@ -276,12 +276,12 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     width: auto;
     height: auto;
     margin: auto;
-    margin-bottom: 6em;
+    margin-bottom: 5em;
     margin-top: 4em;
     text-align: center;
-  }
-  
-  section .glitch-con h2.section-title {
+}
+
+section .glitch-con h2.section-title {
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -516,8 +516,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
   }
   
   .music-preview {
-    margin-bottom: 100px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0,55, 0.8);
     padding: 20px;
     width: 100%;
     height: 100%;
@@ -631,16 +630,15 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 .section-title {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     /* Gold color for the title */
 }
 
 /* Merchandise Preview Section*/
 
 .merch-preview {
-    margin-bottom: 50px;
 
-    background-color: rgba( 0, 0, 0, 0.9);
+    background-color: rgba( 0, 45, 45, 0.9);
     padding: 20px;
     width: 100%;
     height: 100%;
@@ -759,7 +757,9 @@ iframe {
 }
 
 #gallery {
-    background-color: rgba( 0, 0, 0, 0.8);
+    padding:20px;
+    width: 100%;
+    background-color: rgba( 55, 0, 10, 0.8);
 }
 
 .gallery-container {
@@ -853,28 +853,12 @@ iframe {
     }
 }
 
-/* General Body Styles */
-/* body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('images/background-image2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Futura', sans-serif;
-    margin: 0;
-    padding: 0;
-    max-width: 1000;
-    background-color:#000;
-    color: white;
-}*/
-
 /* Events Section Styles */
 #events-preview {
     margin-bottom: 50px;
 
     font-family: 'Futura';
-    background: rgba(0, 0, 0, 0.5); /* Reddish color with 50% transparency */
+    background: rgba(0, 0, 0, 0.1); /* Reddish color with 50% transparency */
     padding: 50px 20px;
     color: white;
 }
@@ -883,7 +867,6 @@ iframe {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .events-grid {
     display: grid;
@@ -995,11 +978,10 @@ iframe {
 }
 
 #contact {
-    margin-bottom: 50px;
-
+    margin-bottom: 20px;
     line-height: 1.6;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.5); /* Reddish transparent background */
+    background: rgba(0, 0, 0, 10); /* Reddish transparent background */
     color: white;
     text-align: center;
 }
@@ -1643,9 +1625,7 @@ img {
     nav {
         position: relative; /* Change to relative positioning */
     }
-    nav  {
-        justify-content: space-between;
-    }
+    
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
