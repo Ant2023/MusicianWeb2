@@ -544,7 +544,7 @@ section .glitch-con h2.section-title {
 
 .music-item {
     position: relative;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -972,8 +972,8 @@ iframe {
     }
 
     .event-info .event-button {
-        padding: 6px 10px; /* Further reduce padding for button */
-        font-size: 0.8rem; /* Smaller font size for button */
+        padding: 6px 10px; 
+        font-size: 0.8rem;
     }
 }
 
@@ -981,7 +981,7 @@ iframe {
     margin-bottom: 20px;
     line-height: 1.6;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 10); /* Reddish transparent background */
+    background: rgba(0, 0, 0, 10);
     color: white;
     text-align: center;
 }
@@ -1696,6 +1696,12 @@ img {
 
 
 /* Music Page */
+.music-body::before {
+    background-image: none;
+    background-color:#6b8888 ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 #music-body nav {
     background-color: rgba( 0, 0, 0, 10);
@@ -1708,11 +1714,15 @@ img {
     padding: 20px;
 }
 
-.music-main1 {
-    background-color: rgba(0, 0, 0, 0.2);
 
+.music-main img{
+    width: 100%;
+    height: auto;
+}
+
+.music-main1 {
     padding: 20px;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 
@@ -1736,6 +1746,11 @@ img {
     align-items: center;
 }
 
+.music-main1 h2{
+    font-family: "futura";
+    font-weight: 900;
+    font-size: 3rem;
+}
 .music-item1 img {
     width: 100%;
     max-width: 200px; /* Adjust the maximum width as needed */
@@ -1774,8 +1789,18 @@ img {
 }
 
 @media (max-width: 500px) {
+    .music-main1 h2{
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+    .music-item1 a{
+        font-size: 0.8rem;
+    }
+    .music-item1 p{
+        font-size: 1rem;
+    }
     .music-item1 {
-        width: 100%; /* One item per row on very small screens */
+        width: calc(50% - 10px); /* Two items per row on smaller screens */
     }
 }
 
