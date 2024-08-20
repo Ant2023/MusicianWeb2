@@ -9,20 +9,24 @@
 /* Moon Phases Inspired Color Scheme */
 /* Sirin Labs Inspired Color Scheme */
 :root {
-    --color-primary: #2C3531; /* Dark Slate Gray */
-    --color-secondary: #116466; /* Deep Cyan */
-    --color-tertiary: #D9B08C; /* Pale Gold */
-    --color-quaternary: #FFCB9A; /* Sandy */
-    --color-quinary: #D1E8E2; /* Pale Robin Egg Blue */
+    --primary-color: rgb(0, 97, 224);   /* Main color for key elements */
+    --secondary-color-1: rgb(0, 250, 233); /* Light accent color */
+    --secondary-color-2: rgb(0, 187, 250); /* Mid-tone accent color */
+    --secondary-color-3: #00FA94; /* Green accent color */
+    --highlight-color: #011FFB; /* Standout elements */
+    --background-color: #00FAE9; /* General background color */
+    --text-color-light: #FFFFFF; /* Light text on dark backgrounds */
+    --text-color-dark: #000000; /* Dark text on light backgrounds */
 }
 
 
+
 body {
+    color: var(--text-color-dark);
     font-family: 'Futura', sans-serif;
     margin: 0;
     padding: 0;
     max-width: 100%;
-    color: white;
     height: 100%;
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -34,7 +38,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('images/background-image2.jpg') center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 97, 224, 0.5), rgba(0, 97, 224, 0.5)), url('images/Fatai-musicbackground.jpg') center center / cover no-repeat;
     z-index: -1;
 }
 .about-navbar nav {
@@ -43,12 +47,12 @@ body::before {
 
 
 nav {
-    color: white;
+    background: var(--text-color-dark);
+    color: var(--text-color-light);
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 10); /* Semi-transparent background */
     position: absolute;
     width: 100%;
     top: 0;
@@ -65,20 +69,25 @@ nav .logo img {
 nav .mainMenu {
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items:center;
     padding: 0;
-}
 
+}
+nav .mainMenu li {
+    margin-bottom: 30px;
+}
 nav .mainMenu li a {
     padding: 10px 15px;
-    color: white;
+    color:var(--text-color-light);
     text-decoration: none;
+
 }
 
 nav .openMenu, nav .closeMenu {
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    
 }
 
 nav .social-icons a {
@@ -95,15 +104,15 @@ nav .mainMenu li a {
     font-weight: 500;
     font-size: 1.2rem;
     padding: 10px 15px;
-    color: white;
+    color: var(--text-color-light);
     text-decoration: none;
     background-color: transparent; /* Ensure background is transparent initially */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
 }
 
 nav .mainMenu li a:hover, nav .mainMenu li a:focus {
-    background-color: #014034; /* Dark green for hover */
-    color: #FFD700; /* Gold color for text on hover */
+    background-color: var(--secondary-color-1); /* Dark green for hover */
+    color: var(--text-color-light); /* Gold color for text on hover */
     cursor: pointer; /* Cursor changes to pointer to indicate clickable */
 }
 
@@ -289,9 +298,9 @@ section .glitch-con h2.section-title {
   
   .glitch {
     position: relative;
-    color: white;
+    color: var(--text-color-dark);
     font-size: 7em;
-    animation: glitch-animation 2s infinite;
+    animation: glitch-animation 10s infinite;
   }
   @media (max-width: 1300px) {
     .glitch {
@@ -320,14 +329,14 @@ section .glitch-con h2.section-title {
   
   .glitch::before {
     left: 2px;
-    text-shadow: -2px 0 magenta;
+    text-shadow: -2px 0 rgb(0, 21, 255);
     clip: rect(24px, 550px, 90px, 0);
-    animation: glitch-before 2s infinite linear alternate-reverse;
+    animation: glitch-before 10s infinite linear alternate-reverse;
   }
   
   .glitch::after {
     left: -2px;
-    text-shadow: -2px 0 lightgreen;
+    text-shadow: -2px 0 var(--background-color);
     clip: rect(85px, 550px, 140px, 0);
     animation: glitch-after 2s infinite linear alternate-reverse;
   }
@@ -516,13 +525,12 @@ section .glitch-con h2.section-title {
   }
   
   .music-preview {
-    background-color: rgba(0, 0,55, 0.8);
     padding: 20px;
     width: 100%;
     height: 100%;
     font-family: 'futura';
     line-height: 1.6;
-    color: #fff;
+    color: var(--text-color-dark);
 }
 
 .music-container {
@@ -544,7 +552,7 @@ section .glitch-con h2.section-title {
 
 .music-item {
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--secondary-color-2);
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -567,7 +575,7 @@ section .glitch-con h2.section-title {
 }
 
 .music-item a {
-    color: #fff; /* Gold color */
+    color: var(--text-color-dark); /* Gold color */
     text-decoration: underline;
     font-weight: 700;
     font-size: 0.9rem;
@@ -579,11 +587,13 @@ section .glitch-con h2.section-title {
 }
 
 .music-text2 {
+
     width: 45%;
     text-align: center;
 }
 
 .music-text2 h3 {
+
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 10px;
@@ -637,14 +647,12 @@ section .glitch-con h2.section-title {
 /* Merchandise Preview Section*/
 
 .merch-preview {
-
-    background-color: rgba( 0, 45, 45, 0.9);
     padding: 20px;
     width: 100%;
     height: 100%;
     font-family: 'futura';
     line-height: 1.6;
-    color: #fff;
+    color: var(--text-color-dark);
 }
 .merch-container {
     display: flex;
@@ -677,6 +685,7 @@ section .glitch-con h2.section-title {
 .merch-text h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: var(--text-color-light);
 }
 
 .merch-text p {
@@ -689,9 +698,9 @@ section .glitch-con h2.section-title {
     margin: 20px auto;
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: white;
+    color: var(--text-color-dark);
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -701,8 +710,8 @@ a {
 }
 
 .shop-btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--secondary-color-2);
+    color:var(--text-color-light);
 }
 
 @media (max-width: 786px){
@@ -759,7 +768,6 @@ iframe {
 #gallery {
     padding:20px;
     width: 100%;
-    background-color: rgba( 55, 0, 10, 0.8);
 }
 
 .gallery-container {
@@ -855,12 +863,11 @@ iframe {
 
 /* Events Section Styles */
 #events-preview {
-    margin-bottom: 50px;
 
     font-family: 'Futura';
-    background: rgba(0, 0, 0, 0.1); /* Reddish color with 50% transparency */
+    background: var(--secondary-color-2); /* Reddish color with 50% transparency */
     padding: 50px 20px;
-    color: white;
+    color: var(--text-color-dark);
 }
 
 #events-preview .container {
@@ -886,7 +893,6 @@ iframe {
 }
 
 .event-info {
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -895,7 +901,7 @@ iframe {
 .event-info h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--text-color-dark);
 }
 
 .event-info .event-date, .event-info .event-location {
@@ -906,8 +912,8 @@ iframe {
 
 .event-info .event-button {
     display: inline-block;
-    background-color: #c6b900; /* Deep Cyan */
-    color: #000;
+    background-color: var(--highlight-color); /* Deep Cyan */
+    color: var(--text-color-light);
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -978,10 +984,9 @@ iframe {
 }
 
 #contact {
-    margin-bottom: 20px;
     line-height: 1.6;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 10);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
 }
@@ -2032,7 +2037,7 @@ nav .mainMenu.expanded {
     position: absolute;
     top: 20px; /* Height of the nav bar */
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--primary-color);
 }
 nav .logo img {
     width: 65px;
