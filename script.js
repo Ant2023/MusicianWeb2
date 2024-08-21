@@ -36,8 +36,9 @@ prevButton.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', updateCarousel);
-
-
+// Start the automatic slide on page load
+startAutoSlide();
+updateCarousel();
 
 // Swipe functionality
 let touchStartX = 0;
@@ -53,19 +54,15 @@ carouselContainer.addEventListener('touchend', (e) => {
 });
 
 function handleSwipeGesture() {
-    if (touchEndX < touchStartX) {
+    if (touchEndX < touchStartX - 50) {
         // Swipe left
         nextButton.click();
-    } else if (touchEndX > touchStartX) {
+    } else if (touchEndX > touchStartX + 50) {
         // Swipe right
         prevButton.click();
     }
 }
 
-
-// Start the automatic slide on page load
-startAutoSlide();
-updateCarousel();
 
 
 
