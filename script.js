@@ -37,9 +37,37 @@ prevButton.addEventListener('click', () => {
 
 window.addEventListener('resize', updateCarousel);
 
+
+
+// Swipe functionality
+let touchStartX = 0;
+let touchEndX = 0;
+
+carouselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+carouselContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+});
+
+function handleSwipeGesture() {
+    if (touchEndX < touchStartX) {
+        // Swipe left
+        nextButton.click();
+    } else if (touchEndX > touchStartX) {
+        // Swipe right
+        prevButton.click();
+    }
+}
+
+
 // Start the automatic slide on page load
 startAutoSlide();
 updateCarousel();
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
