@@ -20,6 +20,7 @@
 
 
 body {
+  
     color: var(--text-color-dark);
     font-family: 'Futura', sans-serif;
     margin: 0;
@@ -36,7 +37,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(60, 25, 25, 0.9), rgba(60, 25, 35, 0.9)), url('images/background-image2.jpg') center center / cover no-repeat;
+    background: linear-gradient(rgba(60, 25, 25, 10), rgba(60, 25, 35, 10));
     z-index: -1;
 }
 .about-navbar nav {
@@ -45,7 +46,7 @@ body::before {
 
 
 nav {
-    background: rgba(2, 18, 71, 0.7) ;
+    background:#140028 ;
     color: var(--text-color-light);
     padding: 10px 20px;
     display: flex;
@@ -1195,7 +1196,7 @@ iframe {
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark charcoal background */
+    background-color:#140028; /* Dark charcoal background */
     color: white;
     text-align: center;
     padding: 20px 0;
