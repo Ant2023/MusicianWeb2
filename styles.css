@@ -49,7 +49,7 @@ body::before {
 
 
 nav {
-    background:#000 ;
+    background:rgba(0, 0, 0, 0.8) ;
     color: var(--text-color-light);
     padding: 10px 20px;
     display: flex;
@@ -113,7 +113,7 @@ nav .mainMenu li a {
 }
 
 nav .mainMenu li a:hover, nav .mainMenu li a:focus {
-    background-color: var(--secondary-color-1); /* Dark green for hover */
+    background-color: rgb(236, 236, 8); /* Dark green for hover */
     color: var(--text-color-light); /* Gold color for text on hover */
     cursor: pointer; /* Cursor changes to pointer to indicate clickable */
 }
@@ -2040,7 +2040,7 @@ nav .mainMenu.expanded {
     position: absolute;
     top: 20px; /* Height of the nav bar */
     left: 0;
-    background: var(--primary-color);
+    background: #000;
 }
 nav .logo img {
     width: 65px;
