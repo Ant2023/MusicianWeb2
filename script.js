@@ -62,23 +62,30 @@ function handleSwipeGesture() {
         prevButton.click();
     }
 }
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.mainMenu');
+    const mainMenu = document.querySelector('.mainMenu');
     const closeMenu = document.querySelector('.closeMenu');
+    const openMenu = document.querySelector('.openMenu');
+    const menuItems = document.querySelectorAll('nav .mainMenu li a');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.add('expanded');
-    });
+    function showMenu() {
+        mainMenu.classList.add('expanded');
+    }
 
-    closeMenu.addEventListener('click', () => {
-        navLinks.classList.remove('expanded');
+    function hideMenu() {
+        mainMenu.classList.remove('expanded');
+    }
+
+    openMenu.addEventListener('click', showMenu);
+    closeMenu.addEventListener('click', hideMenu);
+
+    // Close menu when a menu item is clicked
+    menuItems.forEach(item => {
+        item.addEventListener('click', hideMenu);
     });
 });
+
+
 
 document.querySelector('.logo img').addEventListener('click', function() {
     this.classList.toggle('rotated');

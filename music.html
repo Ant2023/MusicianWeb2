@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8Figure - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body id="music-body" class="music-body">
     <nav>
         <div class="logo">
@@ -70,9 +71,6 @@
             </div>
         </section>
         
-
-        
-
 </main>
     <!--<section>
         <div class="intro-section">
@@ -188,17 +186,50 @@
         <p>&copy; 2024 8Figure. All rights reserved.Website by AIG Global Business</p>
     </div>
 </footer>
-
-    
     <style>
+        
     .rotated {
         transform: rotate(360deg);
         transition: transform 0.6s ease-in-out;
     }
     </style>
-    
-<script src="script.js"></script>
-
-    
+    <script>
+        
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a');
+        
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click',close);
+        
+        // close menu when you click on a menu item 
+        menu_items.forEach(item => {
+            item.addEventListener('click',function(){
+                close();
+            })
+        })
+        
+        function show(){
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close(){
+            mainMenu.style.top = '-100%';
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.querySelector('.mainMenu');
+            const closeMenu = document.querySelector('.closeMenu');
+        
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.add('expanded');
+            });
+        
+            closeMenu.addEventListener('click', () => {
+                navLinks.classList.remove('expanded');
+            });
+        });
+</script>
 </body>
 </html>
