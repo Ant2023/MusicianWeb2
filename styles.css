@@ -712,7 +712,7 @@ a {
 }
 
 .shop-btn:hover {
-    background-color: var(--secondary-color-2);
+    background-color: rgb(236, 236, 8);
     color:var(--text-color-light);
 }
 
