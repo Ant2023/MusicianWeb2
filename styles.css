@@ -286,8 +286,8 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     width: auto;
     height: auto;
     margin: auto;
-    margin-bottom: 5em;
-    margin-top: 4em;
+    margin-bottom: 4em;
+    margin-top: 2em;
     text-align: center;
 }
 
@@ -330,7 +330,7 @@ section .glitch-con h2.section-title {
   
   .glitch::before {
     left: 2px;
-    text-shadow: -2px 0 rgb(255, 0, 0);
+    text-shadow: -2px 0 rgb(255, 0, 89);
     clip: rect(24px, 550px, 90px, 0);
     animation: glitch-before 10s infinite linear alternate-reverse;
   }
@@ -773,10 +773,6 @@ iframe {
 
 .gallery-container {
     margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 }
 
 .gallery-item {
@@ -2119,6 +2115,7 @@ nav .mainMenu { display: none; }
 nav .openMenu { display: block; }
 nav .social-icons { display: none; }
 .mainMenu {
+    margin-top: 0;
     position: fixed;
     top: 0;
     left: 0;

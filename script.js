@@ -15,7 +15,7 @@ function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateCarousel();
-    }, 4000); // 4 seconds interval
+    }, 7000); // 4 seconds interval
 }
 
 function resetAutoSlide() {
@@ -62,26 +62,40 @@ function handleSwipeGesture() {
         prevButton.click();
     }
 }
+
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+const menu_items = document.querySelectorAll('nav .mainMenu li a');
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+// close menu when you click on a menu item 
+menu_items.forEach(item => {
+    item.addEventListener('click',function(){
+        close();
+    })
+})
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
+}
 document.addEventListener('DOMContentLoaded', () => {
-    const mainMenu = document.querySelector('.mainMenu');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.mainMenu');
     const closeMenu = document.querySelector('.closeMenu');
-    const openMenu = document.querySelector('.openMenu');
-    const menuItems = document.querySelectorAll('nav .mainMenu li a');
 
-    function showMenu() {
-        mainMenu.classList.add('expanded');
-    }
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.add('expanded');
+    });
 
-    function hideMenu() {
-        mainMenu.classList.remove('expanded');
-    }
-
-    openMenu.addEventListener('click', showMenu);
-    closeMenu.addEventListener('click', hideMenu);
-
-    // Close menu when a menu item is clicked
-    menuItems.forEach(item => {
-        item.addEventListener('click', hideMenu);
+    closeMenu.addEventListener('click', () => {
+        navLinks.classList.remove('expanded');
     });
 });
 
