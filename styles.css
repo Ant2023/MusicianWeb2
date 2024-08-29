@@ -861,6 +861,7 @@ hr {
     }
     .gallery-text h2{
         font-size: 1rem;
+        text-align: center;
     }
     .gallery-text .shop-btn {
     margin: 10px auto;
