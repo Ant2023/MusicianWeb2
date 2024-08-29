@@ -329,8 +329,8 @@ section .glitch-con h2.section-title {
   }
   
   .glitch::before {
-    left: 2px;
-    text-shadow: -2px 0 rgb(255, 0, 89);
+    left: 1px;
+    text-shadow: -2px 0 rgb(255, 0, 195);
     clip: rect(24px, 550px, 90px, 0);
     animation: glitch-before 10s infinite linear alternate-reverse;
   }
@@ -781,6 +781,7 @@ hr {
     justify-content: space-between;
     margin: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .gallery-item {
@@ -798,6 +799,7 @@ hr {
 .gallery-text {
     width: 55%;
     margin-top: 20%;
+    text-align: center;
 }
 .gallery-item img {
     width: 100%;
@@ -844,6 +846,7 @@ hr {
         height: 1px;          /* Thickness */
         background-color: #fff; /* Color */
     } 
+    
     .gallery-container{
         padding: 0;
         margin-top: 20px;
