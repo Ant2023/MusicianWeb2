@@ -766,8 +766,11 @@ iframe {
     max-width: 100%;
 }
 hr {
-    color: red;
-}
+    border: none;
+    height: 2px;          /* Thickness */
+    background-color: #310d0d; /* Color */
+} 
+
 #gallery {
     padding:20px;
     width: 100%;
