@@ -839,6 +839,11 @@ hr {
 }
 
 @media (max-width: 480px) {
+    hr {
+        border: none;
+        height: 1px;          /* Thickness */
+        background-color: #310d0d; /* Color */
+    } 
     .gallery-container{
         padding: 0;
         margin-top: 20px;
