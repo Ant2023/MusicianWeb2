@@ -842,7 +842,7 @@ hr {
     hr {
         border: none;
         height: 1px;          /* Thickness */
-        background-color: #310d0d; /* Color */
+        background-color: #fff; /* Color */
     } 
     .gallery-container{
         padding: 0;
