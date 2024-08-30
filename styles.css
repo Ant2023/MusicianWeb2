@@ -20,7 +20,7 @@
 
 
 body {
-    background:#100000;
+    background:#000;
     color: var(--text-color-dark);
     font-family: 'Futura', sans-serif;
     margin: 0;
@@ -159,12 +159,12 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 }
 
 #carousel {
+    font-family: 'Futura';
     height: 100%;
     background-color: rgba(0, 0, 0, 0.10);
-    font-family: 'Futura';
 }
 .carousel {
-
+    font-family: 'Futura';
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -230,7 +230,6 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
 }
 .action-btn a {
-    font-family: 'Futura';
     color: #fff;
     text-decoration: none;
 }
@@ -277,7 +276,13 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     text-align: center;
     font-size:2.5rem;
 }
-
+.glitch, .glow {
+    color: #dfbfbf;
+    position: relative;
+    font-size: 7em;
+    animation: glitch 5s 5s infinite;
+    white-space: nowrap;
+}
 
 .glitch-con {
     font-family: "Londrina Outline", cursive;
@@ -286,8 +291,8 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     width: auto;
     height: auto;
     margin: auto;
-    margin-bottom: 4em;
-    margin-top: 2em;
+    margin-bottom: 6em;
+    margin-top: 4em;
     text-align: center;
 }
 
@@ -297,12 +302,6 @@ section .glitch-con h2.section-title {
     padding: 0;
   }
   
-  .glitch {
-    position: relative;
-    color: var(--text-color-dark);
-    font-size: 7em;
-    animation: glitch-animation 10s infinite;
-  }
   @media (max-width: 1300px) {
     .glitch {
       font-size: 6em;
@@ -553,7 +552,7 @@ section .glitch-con h2.section-title {
 
 .music-item {
     position: relative;
-    background-color:#d3c0c0  ;
+    background-color:rgb(129, 194, 235)  ;
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -715,6 +714,30 @@ a {
     color:var(--text-color-light);
 }
 
+
+.merch-samples{
+    font-family: 'Futura';
+    width: 100%;
+    height: auto;
+}
+
+.merchsamples-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+.merchsamples-container img {
+    width: calc(33.3% - 10px);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.merch-samples .shop-btn a {
+    font-family: 'Futura';
+}
+
 @media (max-width: 786px){
     .merch-preview {
         padding: 10px;
@@ -747,6 +770,10 @@ a {
         font-size: 1rem;
         margin-bottom: 10px;
     }
+    .merch-samples{
+        margin: 0;
+        padding: 20px;
+    }
     .merch-text h3 {
         font-size: 1.7rem;
         margin-bottom: 5px;
@@ -767,8 +794,8 @@ iframe {
 }
 hr {
     border: none;
-    height: 2px;          /* Thickness */
-    background-color: #310d0d; /* Color */
+    height: 0.2px;          /* Thickness */
+    background-color: #fff; /* Color */
 } 
 
 #gallery {
@@ -843,8 +870,8 @@ hr {
 @media (max-width: 480px) {
     hr {
         border: none;
-        height: 1px;          /* Thickness */
-        background-color: #fff; /* Color */
+        height: 0.5px;          /* Thickness */
+        background-color: #f9f2f2; /* Color */
     } 
     
     .gallery-container{
