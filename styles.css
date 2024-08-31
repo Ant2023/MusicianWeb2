@@ -552,7 +552,7 @@ section .glitch-con h2.section-title {
 
 .music-item {
     position: relative;
-    background-color:rgb(129, 228, 235)  ;
+    background-color:#d3c0c0 ;
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -1808,9 +1808,7 @@ img {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
-
 }
-
 
 .music-grid1 {
     display: flex;
@@ -1818,7 +1816,6 @@ img {
     justify-content: center;
     gap: 20px;
 }
-
 
 .music-item1 {
     color: #FFF;
