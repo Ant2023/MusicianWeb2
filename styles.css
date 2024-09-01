@@ -16,9 +16,6 @@
     --text-color-light: #FFFFFF; /* Light text on dark backgrounds */
     --text-color-dark: #000000; /* Dark text on light backgrounds */
 }
-
-
-
 body {
     background:#000;
     color: var(--text-color-dark);
@@ -544,6 +541,7 @@ section .glitch-con h2.section-title {
 
 .music-grid {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     gap: 20px;
     padding: 20px;
@@ -553,10 +551,10 @@ section .glitch-con h2.section-title {
 .music-item {
     position: relative;
     background-color:#d3c0c0 ;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     overflow: hidden;
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -587,17 +585,17 @@ section .glitch-con h2.section-title {
     text-decoration: underline;
 }
 
-.music-text2 {
-
-    width: 45%;
-    text-align: center;
-}
-
-.music-text2 h3 {
-
-    font-weight: 700;
+.music-text2 h2 {
+    font-family: "Londrina Outline", cursive;
     font-size: 2rem;
     margin-bottom: 10px;
+    color: var(--text-color-light);
+}
+
+.music-text2 {
+    margin-top: 30px;
+    width: 45%;
+    text-align: center;
 }
 
 .music-text2 p {
@@ -629,7 +627,7 @@ section .glitch-con h2.section-title {
     }
     .music-text2 p {
         font-size: 1.1rem;
-        text-align: center;
+        text-align: justify;
     }
     .action-btn2 {
         font-size: 1.1rem;
@@ -699,9 +697,9 @@ section .glitch-con h2.section-title {
     margin: 20px auto;
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: rgb(204, 201, 2);
+    color: #fff;
     background-color: transparent;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -757,7 +755,8 @@ a {
         text-align: center;
     }
     .merch-text p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        text-align: justify;
     }
     .merch-text h2 {
         font-size: 1.6rem;
