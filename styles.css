@@ -859,6 +859,7 @@ hr {
     .gallery-item {
         flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
     }
+
     .gallery-text h2{
         font-size: 1.8rem;
     }
@@ -870,9 +871,9 @@ hr {
 @media (max-width: 480px) {
     hr {
         border: none;
-        height: 0.5px;          /* Thickness */
-        background-color: #f9f2f2; /* Color */
-    } 
+        height: 0.5px;
+        background-color: #f9f2f2;
+    }
     
     .gallery-container{
         padding: 0;
@@ -883,7 +884,8 @@ hr {
     }
 
     .gallery-text {
-        display: none;
+        display:;
+        text-align: center;
     }
     /*.gallery-item h3{
         font-size: 0.6rem;
