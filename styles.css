@@ -2,19 +2,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+    box-sizing: border-box;
 }
 
 
 :root {
-    --primary-color: rgb(0, 97, 224);   /* Main color for key elements */
-    --secondary-color-1: rgb(0, 250, 233); /* Light accent color */
-    --secondary-color-2: rgb(0, 187, 250); /* Mid-tone accent color */
-    --secondary-color-3: #00FA94; /* Green accent color */
-    --highlight-color: #011FFB; /* Standout elements */
-    --background-color: #00FAE9; /* General background color */
-    --text-color-light: #FFFFFF; /* Light text on dark backgrounds */
-    --text-color-dark: #000000; /* Dark text on light backgrounds */
+    --primary-color: rgb(0, 97, 224);
+    --secondary-color-1: rgb(0, 250, 233);
+    --secondary-color-2: rgb(0, 187, 250);
+    --secondary-color-3: #00FA94;
+    --highlight-color: #011FFB;
+    --background-color: #00FAE9;
+    --text-color-light: #FFFFFF;
+    --text-color-dark: #000000;
 }
 body {
     background:#000;
@@ -25,25 +25,12 @@ body {
     max-width: 100%;
     height: 100%;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
-/*
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(60, 25, 25, 10), rgba(60, 25, 35, 10));
-    z-index: -1;
-}
-*/
 .about-navbar nav {
     position: relative;
 }
-
 
 nav {
     background:rgba(0, 0, 0, 0.8) ;
@@ -56,9 +43,8 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000; 
 }
-
 
 nav .logo img {
     width: 100px;
@@ -79,14 +65,12 @@ nav .mainMenu li a {
     padding: 10px 15px;
     color:var(--text-color-light);
     text-decoration: none;
-
 }
 
 nav .openMenu, nav .closeMenu {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    
 }
 
 nav .social-icons a {
@@ -104,20 +88,20 @@ nav .mainMenu li a {
     padding: 10px 15px;
     color: var(--text-color-light);
     text-decoration: none;
-    background-color: transparent; /* Ensure background is transparent initially */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav .mainMenu li a:hover, nav .mainMenu li a:focus {
-    background-color: rgb(236, 236, 8); /* Dark green for hover */
-    color: var(--text-color-light); /* Gold color for text on hover */
-    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    background-color: rgb(236, 236, 8);
+    color: var(--text-color-light);
+    cursor: pointer;
 }
 
 /* Adding focus style for accessibility */
 nav .mainMenu li a:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5); /* Gold focus ring */
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
 }
 
 /* Styling for social media icons */
@@ -127,7 +111,7 @@ nav .social-icons a {
 }
 
 nav .social-icons a:hover, nav .social-icons a:focus {
-    color: #FFD700; /* Gold color on hover/focus */
+    color: #FFD700;
     cursor: pointer;
 }
 
@@ -179,12 +163,12 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 .carousel-slide {
     flex: 0 0 100%;
     max-width: 100%;
-    position: relative; /* Needed for positioning the buttons */
+    position: relative;
     display: flex;
     height: auto;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-    justify-content: center; /* Center the content vertically */
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide video {
@@ -211,20 +195,20 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     font-family: 'Futura';
     position: absolute;
     top: 70%;
-    background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
-    margin-top: 20px; /* Space between the video and the button */
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
     padding: 10px 20px;
     margin-bottom: 50px;
     font-size: 1.2rem;
     color: white;
     background-color: transparent;
-    border: 1px solid white; /* Adding white border */
-    border-radius: 0; /* Making the border square */
+    border: 1px solid white;
+    border-radius: 0;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease;
 }
 .action-btn:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .action-btn a {
     color: #fff;
@@ -233,8 +217,8 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 
 .button {
     font-family: 'Futura';
-    background-color: rgba(0, 0, 0, 0.3); /* Darker shade on hover */
-    margin-top: 20px; /* Space between the video and the button */
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
     padding: 10px 20px;
     margin-bottom: 50px;
     font-size: 2rem;
@@ -243,10 +227,10 @@ nav .social-icons a:hover, nav .social-icons a:focus {
     font-family: 'Futura';
     color: white;
     background-color: transparent;
-    border:1px solid white; /* Adding white border */
-    border-radius: 0; /* Making the border square */
+    border:1px solid white;
+    border-radius: 0;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -257,7 +241,7 @@ nav .social-icons a:hover, nav .social-icons a:focus {
 /* Music, Events, Merch Sections */
 #welcome {
     font-family: 'Futura';
-    background: rgba(0, 0, 0, 0.85); /* Adjusted for semi-transparency */
+    background: rgba(0, 0, 0, 0.85);
     text-align: left;
     padding: 50px 20px;
     color: var(--white);
@@ -480,17 +464,17 @@ section .glitch-con h2.section-title {
       transform: skew(-0.2deg);
     }
     55% {
-      clip: rect(0, 9999px, 100px, 0);
-      transform: skew(-0.2deg);
-    }
+    clip: rect(0, 9999px, 100px, 0);
+    transform: skew(-0.2deg);
+}
     60% {
-      clip: rect(0, 9999px, 70px, 0);
-      transform: skew(-0.2deg);
-    }
+    clip: rect(0, 9999px, 70px, 0);
+    transform: skew(-0.2deg);
+}
     65% {
-      clip: rect(0, 9999px, 50px, 0);
-      transform: skew(-0.2deg);
-    }
+    clip: rect(0, 9999px, 50px, 0);
+    transform: skew(-0.2deg);
+}
     70% {
       clip: rect(0, 9999px, 20px, 0);
       transform: skew(-0.2deg);
